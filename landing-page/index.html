@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title  -->
+  <title>TITULO LANDING PAGE</title>
+  
+  
+  <!-- Descripción -->
+  <meta name="description" content="META DESCRIPCION DE LANDING PAGE" />
+
+
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+
+  
+  <!-- Estilos de la marca, incluyendo los font family de google -->
+  <link rel="stylesheet" href="../assets/styles/main.css" />
+
+  <link rel="stylesheet" href="../assets/styles/personalizados.css" />
+
+  <link rel="stylesheet" href="../assets/styles/base.css" />
+
+  <link rel="stylesheet" href="../assets/styles/animaciones.css" />
+
+  <!-- Script principal -->
+  <script src="../assets/scripts/main.js" defer></script>
+
+  <!-- Script formulario -->
+  <script src="../assets/scripts/formulario.js" defer></script>
+
+  <!-- Script de meta, de google tag, recaptcha, etc -->
+  <script src="../assets/scripts/scripts-terceros.js" defer></script>
+
+  <!-- Google Recaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js" defer></script>
+  
+  <!-- Meta Pixel Code -->
+
+  <!-- Google tag (gtag.js) -->
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+
+  <!-- End Google Tag Manager (noscript) -->
+  <script async src="../assets/scripts/scripts-terceros-body.js"></script>
+
+<!-- Versón index.html -->
+  <header id="header-container"></header>
+  <main id="main-content">
+
+    <section id="formulario"></section>
+
+  </main>
+  <footer id="footer-container"></footer>
+<script defer>
+  // Cargar un componente en un contenedor por ID
+  async function loadComponent(id, file) {
+    try {
+      const res = await fetch(file);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const html = await res.text();
+      document.getElementById(id).innerHTML = html;
+      console.log(`✅ ${file} cargado correctamente en #${id}`);
+    } catch (err) {
+      console.error(`❌ Error cargando ${file} en #${id}:`, err);
+    }
+  }
+
+  // Carga individual por secciones
+  loadComponent('header-container', '../components/header.html');
+  loadComponent('footer-container', '../components/footer.html');
+  loadComponent('formulario', '../components/formulario.html');
+
+  // Cargar múltiples componentes en un mismo contenedor (opcional)
+  async function loadMultipleComponents(containerId, files) {
+    const container = document.getElementById(containerId);
+    for (const file of files) {
+      try {
+        const res = await fetch(file);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const html = await res.text();
+        container.insertAdjacentHTML('beforeend', html);
+        console.log(`✅ ${file} insertado en #${containerId}`);
+      } catch (err) {
+        console.error(`❌ Error cargando ${file} en #${containerId}:`, err);
+      }
+    }
+  }
+
+</script>
+</body>
+</html>

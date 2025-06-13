@@ -1,0 +1,169 @@
+
+
+a.btn, button{
+    color: var(--textoBlanco);
+    background-color: var(--naranja);
+}
+
+
+
+label, input, textarea, select, option{
+    color: var(--inputsColor);
+}
+input, textarea, select, #formulario details{
+    border-color: var(--borderColor);
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+}
+input:focus, textarea:focus, select:focus{
+    background-color: var(--inputsActivo);
+    outline-color: var(--borderColor);
+    border: 1px var(--borderColor);
+    outline-width: 1px;
+    outline-style: solid;
+}
+
+input:hover, textarea:hover, select:hover{
+    border: 1px var(--borderColor);
+    outline-color: var(--borderColor);
+    outline-width: 2px;
+    outline-style: solid;
+    transition: 0s;
+}
+
+input:disabled, textarea:disabled, select:disabled,
+input:disabled:hover, textarea:disabled:hover, select:disabled:hover{
+    background-color: var(--inputsDisabled);
+    outline-color: var(--borderColor);
+    border: 1px var(--borderColor);
+    color: var(--inputsTxtDisabled);
+    outline-width: 1px;
+    outline-style: solid;
+}
+label.disabled{
+    color: var(--inputsDisabled);
+}
+
+a.btn:hover, button:hover{
+    background-color: var(--azul);
+    cursor: pointer;
+}
+
+a.btn.secundario, button.secundario{
+    background-color: white;
+    border: 1px solid var(--azul);
+    color: var(--azulFuerte);
+}
+a.btn.secundario:hover, button.secundario:hover{
+    border: 1px solid var(--textoNegro);
+    color: var(--textoNegro);
+}
+
+button:disabled, button.secundario:disabled, button.secundario:disabled:hover, button:disabled:hover,
+a.deshabilitado, a.btn.deshabilitado.secundario, a.deshabilitado:hover, a.btn.secundario.deshabilitado:hover{
+    background-color: var(--deshabilitado);
+    color: var(--textoDeshabilitado);
+    border: none;
+}
+button:disabled, button.secundario:disabled, button.secundario:disabled:hover, button:disabled:hover,
+a.deshabilitado, a.btn.deshabilitado.secundario, a.deshabilitado:hover, a.btn.secundario.deshabilitado:hover, input:disabled, textarea:disabled, select:disabled, label.disabled{
+    cursor: no-drop;
+}
+
+.card {
+    background: white;
+    filter: drop-shadow(-4px 0px 21px lightgray);
+}
+.card:hover {
+    background: white;
+    filter: drop-shadow(4px 0px 4px lightgray);
+}
+
+form.enviado input:valid, form.enviado select:valid, form.enviado textarea:valid {
+    border: 2px solid var(--borderValid);
+    background-color: var(--inputValid);
+}
+
+form.enviado input:invalid, form.enviado select:invalid, form.enviado textarea:invalid {
+    border: 2px solid var(--borderInValid);
+    background-color: var(--inputInValid);
+}
+
+.BGAzulCielo{
+    background-color: var(--azulCielo);
+}
+.BGAzulMarca{
+    background-color: var(--azul);
+}
+.CAzulMarca{
+    color: var(--azul);
+}
+.BGNegro{
+    background-color: black;
+}
+.BGNegroFooter{
+    background-color: var(--negroFooter);
+}
+.BGNegro, .BGAzulMarca {
+    color: var(--textoBlanco);
+}
+section{
+    max-width: 1440px;
+}
+
+.CBlanco{
+    color: var(--textoBlanco);
+}
+.CNegro{
+    color: var(--textoNegro);
+}
+
+:root{
+    --naranja: #FF3B00; /* Color de marca*/
+    --azul: #02ABE7;  /* Color de marca*/
+    --azulCielo: #E6EFFA;  /* Color de marca*/
+    --morado: #9b9af3;  /* Color de marca*/
+    --textoBlanco: #F0F0F0;
+    --textoNegro: #2B2B2B; /* Color general*/
+    --deshabilitado: #E9E9E9;
+    --textoDeshabilitado: #D6D6D6;
+    --azulFuerte: #020E38;
+    --borderColor: #575757;
+    --inputsColor: #231F20;
+    --inputsActivo: #E9F4FF;
+    --inputsDisabled: #DBDBDB;
+    --inputsTxtDisabled: #BEBEBE;
+    --borderValid: #005531;
+    --inputValid: #C1FFE0;
+    --borderInValid: #F70000;
+    --inputInValid: #FFE8E7;
+    --fontFamilyAlbert: "Albert Sans", sans-serif;
+    --negroFooter:#141414;
+}
+
+*{
+    font-family: var(--fontFamilyAlbert);
+    color: var(--textoNegro);
+    line-height: normal;
+    font-weight: 400;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+    font-size: 16px;
+}
+*:hover{
+    transition: 0.5s;
+}
+
+
+li::marker{
+  content: none;
+}
+
+
+
+/* Font Family de la Marca */
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');

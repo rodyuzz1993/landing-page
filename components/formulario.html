@@ -1,0 +1,132 @@
+<article class="partners displayFlex">
+  <img src="../assets/images/googlePartner.svg" loading="lazy" alt="Google" class="google">
+  <img src="../assets/images/metaBusinessPartner.png" loading="lazy" alt="Meta" class="meta">
+</article>
+
+<img class="robot" src="../assets/images/robotHicomerce.svg" alt="Robot Hicomerce" loading="lazy">
+
+<article class="textos">
+  <h2 class="fontSizeDesk36Mob28 textCenter">
+    ¿Listo para duplicar las ventas de tu empresa?
+  </h2>
+  <p class="fontSizeDesk20Mob20 textCenter">
+    Da el siguiente paso y reserva una demo gratuita.
+  </p>
+</article>
+
+<form id="synthflow">
+  <div class="normal">
+    <label for="nombreCompleto">Nombre completo <span style="color:red">*</span></label>
+    <input required type="text" id="nombreCompleto" />
+  </div>
+
+  <div class="normal">
+    <label for="email">E-mail <span style="color:red">*</span></label>
+    <input required type="email" id="email" />
+  </div>
+
+  <div class="normal">
+    <label for="numeroCelular">Número celular <span style="color:red">*</span></label>
+    <input required type="number" id="numeroCelular" inputmode="numeric" pattern="[0-9]*" />
+  </div>
+
+  <div class="normal">
+    <label for="nombreEmpresa">Nombre de la empresa <span style="color:red">*</span></label>
+    <input required type="text" id="nombreEmpresa" />
+  </div>
+
+  <div class="normal">
+    <label for="giroEmpresa">¿Cuál es el giro de tu empresa? <span style="color:red">*</span></label>
+    <select required id="giroEmpresa" onchange="mostrarGiroOtro()">
+      <option value="">Selecciona una opción</option>
+      <option value="Desarrollos inmobiliarios">Desarrollos inmobiliarios</option>
+      <option value="E-commerce">E-commerce</option>
+      <option value="Logística">Logística</option>
+      <option value="Servicios B2B">Servicios B2B</option>
+      <option value="Salud">Salud</option>
+      <option value="Otro">Otro</option>
+    </select>
+    <input type="text" id="giroOtro" placeholder="Escribe tu opción" style="display:none; margin-top:10px;" />
+  </div>
+
+  <div class="seleccion">
+    <label for="cuantoVendes">¿Cuánto estás vendiendo al mes tu empresa? <span style="color:red">*</span></label>
+    <select required id="cuantoVendes">
+      <option value="">Selecciona una opción</option>
+      <option value="menos de $250,000">Menos de $250,000</option>
+      <option value="mas de $250,000">Más de $250,000</option>
+    </select>
+  </div>
+
+  <div class="seleccion">
+    <label for="equipoCliente">¿Tu empresa ya cuenta con un equipo comercial o atención al cliente? <span style="color:red">*</span></label>
+    <select required id="equipoCliente">
+      <option value="">Selecciona una opción</option>
+      <option value="Si">Si</option>
+      <option value="No todavia">No todavía</option>
+    </select>
+  </div>
+
+  <div class="seleccion">
+    <label for="leadSemana">¿Cuántos leads o contactos nuevos recibes por semana? <span style="color:red">*</span></label>
+    <select required id="leadSemana">
+      <option value="">Selecciona una opción</option>
+      <option value="Menos de 20">Menos de 20</option>
+      <option value="20 a 50">20 a 50</option>
+      <option value="50 a 100">50 a 100</option>
+      <option value="Más de 100">Más de 100</option>
+    </select>
+  </div>
+
+  <div class="seleccion">
+    <label for="pierdesOportunidad">¿Actualmente pierdes oportunidades por falta de seguimiento o saturación de equipo? <span style="color:red">*</span></label>
+    <select required id="pierdesOportunidad">
+      <option value="">Selecciona una opción</option>
+      <option value="Si, muchas">Si, muchas</option>
+      <option value="A veces">A veces</option>
+      <option value="No, tenemos todo bajo control">No, tenemos todo bajo control</option>
+    </select>
+  </div>
+
+  <div class="seleccion">
+    <p>¿Cuál es tu objetivo principal con una solución de IA? <span style="color:red">*</span></p>
+    <details>
+      <summary>Selecciona una o varias opciones</summary>
+      <div>
+        <label class="opciones"><input type="checkbox" name="objetivosIA[]" value="Agendar más citas automáticamente"> Agendar más citas automáticamente</label>
+        <label class="opciones"><input type="checkbox" name="objetivosIA[]" value="Calificar prospectos antes de pasar a ventas"> Calificar prospectos antes de pasar a ventas</label>
+        <label class="opciones"><input type="checkbox" name="objetivosIA[]" value="Automatizar seguimiento y respuesta"> Automatizar seguimiento y respuesta</label>
+        <label class="opciones"><input type="checkbox" name="objetivosIA[]" value="Generar prospectos nuevos"> Generar prospectos nuevos</label>
+      </div>
+    </details>
+  </div>
+
+  <div class="seleccion">
+    <label for="factura">¿Tu empresa ya factura regularmente y tiene operaciones estables? <span style="color:red">*</span></label>
+    <select required id="factura">
+      <option value="">Selecciona una opción</option>
+      <option value="Si, llevamos más de 3 años">Si, llevamos más de 3 años</option>
+      <option value="Estamos en etapa de crecimiento">Estamos en etapa de crecimiento</option>
+      <option value="Aún no operamos del todo">Aún no operamos del todo</option>
+    </select>
+  </div>
+
+  <div class="seleccion" style="width: 100%; max-width: 100%;">
+    <label for="implementarSolucion">¿En cuánto tiempo te gustaría implementar esta solución? <span style="color:red">*</span></label>
+    <select required id="implementarSolucion">
+      <option value="">Selecciona una opción</option>
+      <option value="Lo antes posible">Lo antes posible</option>
+      <option value="En 1-3 meses">En 1-3 meses</option>
+      <option value="Solo estoy explorando">Solo estoy explorando</option>
+    </select>
+  </div>
+
+  <div class="terminos">
+    <input required type="checkbox" id="aceptoTerminos" />
+    <label for="aceptoTerminos">Acepto los términos y condiciones</label>
+    <a href="/politicas/terminos-condiciones" target="_blank">Ver términos y condiciones</a>
+  </div>
+
+  <button type="submit">Agenda tu Sesión Gratis</button>
+</form>
+
